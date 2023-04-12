@@ -1,0 +1,70 @@
+Altium Designer Pick and Place Locations
+E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\Project Outputs for PCB_FinalProject\Pick Place for PCB1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       03/07/22
+Time:       23:25
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment    Layer    Footprint Center-X(mil) Center-Y(mil) Rotation Description                                     
+U3         TL081JG    TopLayer JG008     2248.688      279.938       270      "JFET-Input Operational Amplifier"              
+C17        Cap        TopLayer RAD-0.3   2824.508      279.938       90       Capacitor                                       
+C16        Cap        TopLayer RAD-0.3   3088.066      287.618       90       Capacitor                                       
+C15        Cap        TopLayer RAD-0.3   2598.570      279.938       90       Capacitor                                       
+U2         TL084J     TopLayer J014      1038.286      1437.110      270      "JFET-Input Operational Amplifier"              
+U1         AD620AN    TopLayer N-8       1041.660      279.938       270      "Low-Cost, Low-Power Instrumentation Amplifier" 
+Rg1        Res1       TopLayer AXIAL-0.3 1125.574      708.746       90       Resistor                                        
+R29        Res1       TopLayer AXIAL-0.3 1812.650      127.184       180      Resistor                                        
+R28        Res1       TopLayer AXIAL-0.3 3511.100      1017.024      90       Resistor                                        
+R27        Res1       TopLayer AXIAL-0.3 3511.100      532.304       90       Resistor                                        
+R26        Res1       TopLayer AXIAL-0.3 3290.480      1562.370      90       Resistor                                        
+R25        Res1       TopLayer AXIAL-0.3 3290.480      1017.022      90       Resistor                                        
+R24        Res1       TopLayer AXIAL-0.3 1766.418      941.374       90       Resistor                                        
+R23        Res1       TopLayer AXIAL-0.3 1567.836      473.288       90       Resistor                                        
+R22        Res1       TopLayer AXIAL-0.3 1567.836      941.374       90       Resistor                                        
+R21        Res1       TopLayer AXIAL-0.3 1567.836      1437.110      90       Resistor                                        
+R20        Res1       TopLayer AXIAL-0.3 1960.272      473.288       90       Resistor                                        
+R19        Res1       TopLayer AXIAL-0.3 2854.976      941.372       90       Resistor                                        
+R18        Res1       TopLayer AXIAL-0.3 3290.480      532.304       90       Resistor                                        
+R17        Res1       TopLayer AXIAL-0.3 3511.100      1562.370      90       Resistor                                        
+R16        Res1       TopLayer AXIAL-0.3 1960.272      941.372       90       Resistor                                        
+R15        Res1       TopLayer AXIAL-0.3 2854.978      1472.334      90       Resistor                                        
+R14        Res1       TopLayer AXIAL-0.3 1364.526      941.374       90       Resistor                                        
+R13        Res1       TopLayer AXIAL-0.3 704.468       232.154       90       Resistor                                        
+R12        Res1       TopLayer AXIAL-0.3 1364.526      1437.110      90       Resistor                                        
+R11        Res1       TopLayer AXIAL-0.3 1766.418      1437.110      90       Resistor                                        
+R10        Res1       TopLayer AXIAL-0.3 2569.454      1565.504      180      Resistor                                        
+R9         Res1       TopLayer AXIAL-0.3 986.276       708.746       90       Resistor                                        
+R8         Res1       TopLayer AXIAL-0.3 735.686       1657.126      90       Resistor                                        
+R7         Res1       TopLayer AXIAL-0.3 1766.418      473.288       90       Resistor                                        
+R6         Res1       TopLayer AXIAL-0.3 1364.528      473.288       90       Resistor                                        
+R5         Res1       TopLayer AXIAL-0.3 839.704       708.746       90       Resistor                                        
+R4         Res1       TopLayer AXIAL-0.3 1742.778      1804.748      180      Resistor                                        
+R3         Res1       TopLayer AXIAL-0.3 735.686       1168.324      90       Resistor                                        
+R2         Res1       TopLayer AXIAL-0.3 704.468       708.746       90       Resistor                                        
+R1         Res1       TopLayer AXIAL-0.3 574.928       232.154       90       Resistor                                        
+P7         "Header 3" TopLayer HDR1X3    3448.926      112.618       0        "Header, 3-Pin"                                 
+P6         "Header 2" TopLayer HDR1X2    2784.978      1784.748      180      "Header, 2-Pin"                                 
+P5         "Header 2" TopLayer HDR1X2    2491.832      1784.748      0        "Header, 2-Pin"                                 
+P4         "Header 2" TopLayer HDR1X2    1434.528      127.182       180      "Header, 2-Pin"                                 
+P3         "Header 3" TopLayer HDR1X3    429.474       227.182       90       "Header, 3-Pin"                                 
+P2         "Header 2" TopLayer HDR1X2    1409.798      1784.748      180      "Header, 2-Pin"                                 
+P1         "Header 2" TopLayer HDR1X2    102.114       1529.672      90       "Header, 2-Pin"                                 
+C14        Cap        TopLayer RAD-0.3   357.434       1609.748      90       Capacitor                                       
+C13        100nF      TopLayer RAD-0.3   2631.668      1017.024      90       Capacitor                                       
+C12        Cap        TopLayer RAD-0.3   3756.962      693.938       90       Capacitor                                       
+C11        Cap        TopLayer RAD-0.3   3088.066      1609.748      90       Capacitor                                       
+C10        Cap        TopLayer RAD-0.3   3088.066      1017.024      90       Capacitor                                       
+C9         Cap        TopLayer RAD-0.3   565.472       1041.964      90       Capacitor                                       
+C8         Cap        TopLayer RAD-0.3   2418.536      1017.024      90       Capacitor                                       
+C7         Cap        TopLayer RAD-0.3   2035.922      1609.748      90       Capacitor                                       
+C6         Cap        TopLayer RAD-0.3   2239.232      1609.748      90       Capacitor                                       
+C5         Cap        TopLayer RAD-0.3   357.434       1041.964      90       Capacitor                                       
+C4         Cap        TopLayer RAD-0.3   2206.136      1017.024      90       Capacitor                                       
+C3         100nF      TopLayer RAD-0.3   565.472       1609.748      90       Capacitor                                       
+C2         10uF       TopLayer RAD-0.3   3756.962      1375.062      90       Capacitor                                       
+C1         100nF      TopLayer RAD-0.3   158.852       1041.964      90       Capacitor                                       

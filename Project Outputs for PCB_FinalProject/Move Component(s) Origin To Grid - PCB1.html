@@ -1,0 +1,365 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Move Component(s) Origin to Grid</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Move Component(s) Origin to Grid</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">03/07/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:55:29</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc" class="file"><acronym title="E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc">E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDYQCUBVWPGXZ4EVZI54CEGPFYNNQPFTOCHJES5HKKEM3Z2VZ5RVMN"><h2>Components Origin</h2></a><a name="IDL0HXN20RZ3B4PQMGT5QNMFLVGFD02I44P2IVIKNPPFOTTOBG1TFP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning"></th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4052.763mil|Location2.X=4324.417mil|Location1.Y=1086.109mil|Location2.Y=1408.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4052.763mil|Location2.X=4324.417mil|Location1.Y=1086.109mil|Location2.Y=1408.981mil|Absolute=True">SOIC Component U5-TL081D (3188.59mil,190.44mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2095.986mil|Location2.X=2463.041mil|Location1.Y=2035.535mil|Location2.Y=2938.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2095.986mil|Location2.X=2463.041mil|Location1.Y=2035.535mil|Location2.Y=2938.981mil|Absolute=True">DIP Component U2-TL084J (1279.514mil,1437.11mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2349mil|Location2.X=2716.318mil|Location1.Y=1073.244mil|Location2.Y=1586.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2349mil|Location2.X=2716.318mil|Location1.Y=1073.244mil|Location2.Y=1586.981mil|Absolute=True">DIP Component U1-AD620AN (1532.791mil,279.937mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2282mil|Location2.X=2441.955mil|Location1.Y=1527.188mil|Location2.Y=2009.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2282mil|Location2.X=2441.955mil|Location1.Y=1527.188mil|Location2.Y=2009.981mil|Absolute=True">Small Component Rg1-Res1 (1316.418mil,708.747mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3529mil|Location2.X=3708.948mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3529mil|Location2.X=3708.948mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True">Small Component R29-Res1 (2563.136mil,212.591mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4453.659mil|Location2.X=4633.948mil|Location1.Y=2089.778mil|Location2.Y=2552.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4453.659mil|Location2.X=4633.948mil|Location1.Y=2089.778mil|Location2.Y=2552.981mil|Absolute=True">Small Component R28-Res1 (3487.596mil,1271.337mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4453.659mil|Location2.X=4633.948mil|Location1.Y=1631.644mil|Location2.Y=2094.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4453.659mil|Location2.X=4633.948mil|Location1.Y=1631.644mil|Location2.Y=2094.981mil|Absolute=True">Small Component R27-Res1 (3487.596mil,813.203mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254mil|Location2.X=4433.948mil|Location1.Y=2500.681mil|Location2.Y=2963.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254mil|Location2.X=4433.948mil|Location1.Y=2500.681mil|Location2.Y=2963.981mil|Absolute=True">Small Component R26-Res1 (3287.976mil,1682.24mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.543mil|Location2.X=4436.948mil|Location1.Y=2027.737mil|Location2.Y=2490.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.543mil|Location2.X=4436.948mil|Location1.Y=2027.737mil|Location2.Y=2490.981mil|Absolute=True">Small Component R25-Res1 (3290.48mil,1209.296mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3042.919mil|Location2.X=3222.948mil|Location1.Y=1469.101mil|Location2.Y=1931.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3042.919mil|Location2.X=3222.948mil|Location1.Y=1469.101mil|Location2.Y=1931.981mil|Absolute=True">Small Component R24-Res1 (2076.856mil,650.66mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182mil|Location2.X=3361.948mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182mil|Location2.X=3361.948mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True">Small Component R23-Res1 (2216.253mil,212.591mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2843.524mil|Location2.X=3023.948mil|Location1.Y=1469.101mil|Location2.Y=1931.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2843.524mil|Location2.X=3023.948mil|Location1.Y=1469.101mil|Location2.Y=1931.981mil|Absolute=True">Small Component R22-Res1 (1877.461mil,650.66mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2843.524mil|Location2.X=3003.955mil|Location1.Y=1929.905mil|Location2.Y=2392.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2843.524mil|Location2.X=3003.955mil|Location1.Y=1929.905mil|Location2.Y=2392.981mil|Absolute=True">Small Component R21-Res1 (1877.461mil,1111.464mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3900mil|Location2.X=4079.948mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3900mil|Location2.X=4079.948mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True">Small Component R20-Res1 (2934.06mil,212.591mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3745.571mil|Location2.X=3915.952mil|Location1.Y=1654.563mil|Location2.Y=2117.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3745.571mil|Location2.X=3915.952mil|Location1.Y=1654.563mil|Location2.Y=2117.981mil|Absolute=True">Small Component R19-Res1 (2779.508mil,836.122mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.543mil|Location2.X=4426.952mil|Location1.Y=1559.757mil|Location2.Y=2022.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.543mil|Location2.X=4426.952mil|Location1.Y=1559.757mil|Location2.Y=2022.981mil|Absolute=True">Small Component R18-Res1 (3290.48mil,741.316mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4453.659mil|Location2.X=4623.952mil|Location1.Y=2500.681mil|Location2.Y=2963.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4453.659mil|Location2.X=4623.952mil|Location1.Y=2500.681mil|Location2.Y=2963.981mil|Absolute=True">Small Component R17-Res1 (3487.596mil,1682.24mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3715.521mil|Location2.X=3885.952mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3715.521mil|Location2.X=3885.952mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True">Small Component R16-Res1 (2749.458mil,212.591mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3745.571mil|Location2.X=3915.952mil|Location1.Y=2155.998mil|Location2.Y=2618.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3745.571mil|Location2.X=3915.952mil|Location1.Y=2155.998mil|Location2.Y=2618.981mil|Absolute=True">Small Component R15-Res1 (2779.508mil,1337.557mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2663.709mil|Location2.X=2833.952mil|Location1.Y=2008.315mil|Location2.Y=2470.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2663.709mil|Location2.X=2833.952mil|Location1.Y=2008.315mil|Location2.Y=2470.981mil|Absolute=True">Small Component R14-Res1 (1697.646mil,1189.874mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2141.668mil|Location2.X=2311.952mil|Location1.Y=1073.244mil|Location2.Y=1535.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2141.668mil|Location2.X=2311.952mil|Location1.Y=1073.244mil|Location2.Y=1535.981mil|Absolute=True">Small Component R13-Res1 (1175.605mil,254.803mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2666.797mil|Location2.X=2836.952mil|Location1.Y=2487.186mil|Location2.Y=2949.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2666.797mil|Location2.X=2836.952mil|Location1.Y=2487.186mil|Location2.Y=2949.981mil|Absolute=True">Small Component R12-Res1 (1700.734mil,1668.745mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3042.919mil|Location2.X=3192.958mil|Location1.Y=1929.905mil|Location2.Y=2392.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3042.919mil|Location2.X=3192.958mil|Location1.Y=1929.905mil|Location2.Y=2392.981mil|Absolute=True">Small Component R11-Res1 (2076.856mil,1111.464mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3429.599mil|Location2.X=3599.952mil|Location1.Y=2500.681mil|Location2.Y=2963.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3429.599mil|Location2.X=3599.952mil|Location1.Y=2500.681mil|Location2.Y=2963.981mil|Absolute=True">Small Component R10-Res1 (2463.536mil,1682.24mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2141.668mil|Location2.X=2261.968mil|Location1.Y=1527.188mil|Location2.Y=1989.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2141.668mil|Location2.X=2261.968mil|Location1.Y=1527.188mil|Location2.Y=1989.981mil|Absolute=True">Small Component R9-Res1 (1175.605mil,708.747mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872mil|Location2.X=1991.968mil|Location1.Y=2475.567mil|Location2.Y=2938.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872mil|Location2.X=1991.968mil|Location1.Y=2475.567mil|Location2.Y=2938.981mil|Absolute=True">Small Component R8-Res1 (905.957mil,1657.126mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3374.647mil|Location2.X=3494.968mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3374.647mil|Location2.X=3494.968mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True">Small Component R7-Res1 (2408.584mil,212.591mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3042.919mil|Location2.X=3162.968mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3042.919mil|Location2.X=3162.968mil|Location1.Y=1031.032mil|Location2.Y=1493.981mil|Absolute=True">Small Component R6-Res1 (2076.856mil,212.591mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2007.723mil|Location2.X=2127.968mil|Location1.Y=1527.188mil|Location2.Y=1989.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2007.723mil|Location2.X=2127.968mil|Location1.Y=1527.188mil|Location2.Y=1989.981mil|Absolute=True">Small Component R5-Res1 (1041.66mil,708.747mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2843.524mil|Location2.X=2963.968mil|Location1.Y=2451.363mil|Location2.Y=2913.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2843.524mil|Location2.X=2963.968mil|Location1.Y=2451.363mil|Location2.Y=2913.981mil|Absolute=True">Small Component R4-Res1 (1877.461mil,1632.922mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872mil|Location2.X=1991.968mil|Location1.Y=1976.724mil|Location2.Y=2439.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872mil|Location2.X=1991.968mil|Location1.Y=1976.724mil|Location2.Y=2439.981mil|Absolute=True">Small Component R3-Res1 (905.957mil,1158.283mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872mil|Location2.X=1991.968mil|Location1.Y=1527.188mil|Location2.Y=1989.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1872mil|Location2.X=1991.968mil|Location1.Y=1527.188mil|Location2.Y=1989.981mil|Absolute=True">Small Component R2-Res1 (905.957mil,708.747mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2007.723mil|Location2.X=2107.974mil|Location1.Y=1073.244mil|Location2.Y=1535.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2007.723mil|Location2.X=2107.974mil|Location1.Y=1073.244mil|Location2.Y=1535.981mil|Absolute=True">Small Component R1-Res1 (1041.66mil,254.803mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4600mil|Location2.X=4719.968mil|Location1.Y=1058.68mil|Location2.Y=1466.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4600mil|Location2.X=4719.968mil|Location1.Y=1058.68mil|Location2.Y=1466.981mil|Absolute=True">Small Component P7-Header 3 (3654.046mil,112.617mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3797.695mil|Location2.X=3917.968mil|Location1.Y=2655.925mil|Location2.Y=2963.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3797.695mil|Location2.X=3917.968mil|Location1.Y=2655.925mil|Location2.Y=2963.981mil|Absolute=True">Small Component P6-Header 2 (2851.632mil,1709.862mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3619mil|Location2.X=3738.968mil|Location1.Y=2655.925mil|Location2.Y=2963.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3619mil|Location2.X=3738.968mil|Location1.Y=2655.925mil|Location2.Y=2963.981mil|Absolute=True">Small Component P5-Header 2 (2673.039mil,1709.862mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2803.524mil|Location2.X=2923.968mil|Location1.Y=1073.244mil|Location2.Y=1380.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2803.524mil|Location2.X=2923.968mil|Location1.Y=1073.244mil|Location2.Y=1380.981mil|Absolute=True">Small Component P4-Header 2 (1857.461mil,127.181mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1795.712mil|Location2.X=1915.968mil|Location1.Y=1100.651mil|Location2.Y=1508.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1795.712mil|Location2.X=1915.968mil|Location1.Y=1100.651mil|Location2.Y=1508.981mil|Absolute=True">Small Component P3-Header 3 (849.649mil,154.588mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2492.592mil|Location2.X=2612.968mil|Location1.Y=2642.43mil|Location2.Y=2949.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2492.592mil|Location2.X=2612.968mil|Location1.Y=2642.43mil|Location2.Y=2949.981mil|Absolute=True">Small Component P2-Header 2 (1546.529mil,1696.367mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1124mil|Location2.X=1232.297mil|Location1.Y=2428.967mil|Location2.Y=2736.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1124mil|Location2.X=1232.297mil|Location1.Y=2428.967mil|Location2.Y=2736.981mil|Absolute=True">Small Component P1-Header 2 (178.36mil,1482.904mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1375.537mil|Location2.X=1545.951mil|Location1.Y=2380.811mil|Location2.Y=2938.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1375.537mil|Location2.X=1545.951mil|Location1.Y=2380.811mil|Location2.Y=2938.981mil|Absolute=True">Small Component C14-Cap (454.474mil,1609.748mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4363.659mil|Location2.X=4533.952mil|Location1.Y=1058.68mil|Location2.Y=1616.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4363.659mil|Location2.X=4533.952mil|Location1.Y=1058.68mil|Location2.Y=1616.981mil|Absolute=True">Small Component C13-100nF (3442.596mil,287.617mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4600mil|Location2.X=4769.952mil|Location1.Y=1512.379mil|Location2.Y=2069.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4600mil|Location2.X=4769.952mil|Location1.Y=1512.379mil|Location2.Y=2069.981mil|Absolute=True">Small Component C12-Cap (3679.045mil,741.316mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4009mil|Location2.X=4167.003mil|Location1.Y=2420.052mil|Location2.Y=2977.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4009mil|Location2.X=4167.003mil|Location1.Y=2420.052mil|Location2.Y=2977.981mil|Absolute=True">Small Component C11-Cap (3088.066mil,1648.989mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4009mil|Location2.X=4178.952mil|Location1.Y=1835.149mil|Location2.Y=2392.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4009mil|Location2.X=4178.952mil|Location1.Y=1835.149mil|Location2.Y=2392.981mil|Absolute=True">Small Component C10-Cap (3088.066mil,1064.086mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.531mil|Location2.X=1783.405mil|Location1.Y=1809.197mil|Location2.Y=2366.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1625.531mil|Location2.X=1783.405mil|Location1.Y=1809.197mil|Location2.Y=2366.981mil|Absolute=True">Small Component C9-Cap (704.468mil,1038.134mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3454mil|Location2.X=3611.925mil|Location1.Y=1835.149mil|Location2.Y=2392.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3454mil|Location2.X=3611.925mil|Location1.Y=1835.149mil|Location2.Y=2392.981mil|Absolute=True">Small Component C8-Cap (2532.988mil,1064.086mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2997.919mil|Location2.X=3155.793mil|Location1.Y=2420.052mil|Location2.Y=2977.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2997.919mil|Location2.X=3155.793mil|Location1.Y=2420.052mil|Location2.Y=2977.981mil|Absolute=True">Small Component C7-Cap (2076.856mil,1648.989mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3206.657mil|Location2.X=3364.531mil|Location1.Y=2420.052mil|Location2.Y=2977.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3206.657mil|Location2.X=3364.531mil|Location1.Y=2420.052mil|Location2.Y=2977.981mil|Absolute=True">Small Component C6-Cap (2285.594mil,1648.989mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1375.537mil|Location2.X=1533.411mil|Location1.Y=1809.197mil|Location2.Y=2366.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1375.537mil|Location2.X=1533.411mil|Location1.Y=1809.197mil|Location2.Y=2366.981mil|Absolute=True">Small Component C5-Cap (454.474mil,1038.134mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3238.969mil|Location2.X=3396.843mil|Location1.Y=1835.149mil|Location2.Y=2392.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3238.969mil|Location2.X=3396.843mil|Location1.Y=1835.149mil|Location2.Y=2392.981mil|Absolute=True">Small Component C4-Cap (2317.906mil,1064.086mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642mil|Location2.X=1800.014mil|Location1.Y=2380.811mil|Location2.Y=2938.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1642mil|Location2.X=1800.014mil|Location1.Y=2380.811mil|Location2.Y=2938.981mil|Absolute=True">Small Component C3-100nF (721.077mil,1609.748mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4600mil|Location2.X=4757.981mil|Location1.Y=2196.018mil|Location2.Y=2753.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4600mil|Location2.X=4757.981mil|Location1.Y=2196.018mil|Location2.Y=2753.981mil|Absolute=True">Small Component C2-10uF (3679.044mil,1424.955mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1118mil|Location2.X=1275.953mil|Location1.Y=1809.197mil|Location2.Y=2366.981mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1118mil|Location2.X=1275.953mil|Location1.Y=1809.197mil|Location2.Y=2366.981mil|Absolute=True">Small Component C1-100nF (197.016mil,1038.134mil) on Top Layer</acronym></a> - Component pads are OFF grid. No action taken.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

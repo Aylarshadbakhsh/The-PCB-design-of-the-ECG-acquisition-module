@@ -1,0 +1,62 @@
+Move Component(s) Origin to Grid
+Filename     : E:\term8\az elec2\FINAL PROJECT\final_project\PCB_FinalProject\PCB1.PcbDoc
+Date         : 03/07/2022
+Time         : 12:55:29
+Time Elapsed : 00:00:00
+
+
+    SOIC Component U5-TL081D (3188.59mil,190.44mil) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component U2-TL084J (1279.514mil,1437.11mil) on Top Layer - Component pads are OFF grid. No action taken.
+    DIP Component U1-AD620AN (1532.791mil,279.937mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component Rg1-Res1 (1316.418mil,708.747mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R29-Res1 (2563.136mil,212.591mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R28-Res1 (3487.596mil,1271.337mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R27-Res1 (3487.596mil,813.203mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R26-Res1 (3287.976mil,1682.24mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R25-Res1 (3290.48mil,1209.296mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R24-Res1 (2076.856mil,650.66mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R23-Res1 (2216.253mil,212.591mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R22-Res1 (1877.461mil,650.66mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R21-Res1 (1877.461mil,1111.464mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R20-Res1 (2934.06mil,212.591mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R19-Res1 (2779.508mil,836.122mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R18-Res1 (3290.48mil,741.316mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R17-Res1 (3487.596mil,1682.24mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R16-Res1 (2749.458mil,212.591mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R15-Res1 (2779.508mil,1337.557mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R14-Res1 (1697.646mil,1189.874mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R13-Res1 (1175.605mil,254.803mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R12-Res1 (1700.734mil,1668.745mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R11-Res1 (2076.856mil,1111.464mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R10-Res1 (2463.536mil,1682.24mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R9-Res1 (1175.605mil,708.747mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R8-Res1 (905.957mil,1657.126mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R7-Res1 (2408.584mil,212.591mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R6-Res1 (2076.856mil,212.591mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R5-Res1 (1041.66mil,708.747mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R4-Res1 (1877.461mil,1632.922mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R3-Res1 (905.957mil,1158.283mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R2-Res1 (905.957mil,708.747mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component R1-Res1 (1041.66mil,254.803mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P7-Header 3 (3654.046mil,112.617mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P6-Header 2 (2851.632mil,1709.862mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P5-Header 2 (2673.039mil,1709.862mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P4-Header 2 (1857.461mil,127.181mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P3-Header 3 (849.649mil,154.588mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P2-Header 2 (1546.529mil,1696.367mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component P1-Header 2 (178.36mil,1482.904mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C14-Cap (454.474mil,1609.748mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C13-100nF (3442.596mil,287.617mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C12-Cap (3679.045mil,741.316mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C11-Cap (3088.066mil,1648.989mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C10-Cap (3088.066mil,1064.086mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C9-Cap (704.468mil,1038.134mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C8-Cap (2532.988mil,1064.086mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C7-Cap (2076.856mil,1648.989mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C6-Cap (2285.594mil,1648.989mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C5-Cap (454.474mil,1038.134mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C4-Cap (2317.906mil,1064.086mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C3-100nF (721.077mil,1609.748mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C2-10uF (3679.044mil,1424.955mil) on Top Layer - Component pads are OFF grid. No action taken.
+    Small Component C1-100nF (197.016mil,1038.134mil) on Top Layer - Component pads are OFF grid. No action taken.
+count : 54
